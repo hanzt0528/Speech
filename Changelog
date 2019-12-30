@@ -1,0 +1,59 @@
+	  Changelog
+	  ---------
+
+ispeech 0.1 2019.06.26:
+ - first public release
+
+      ----------------------------------------------------------------------
+
+ispeech 0.2 2019.07:
+- added 实现基于sinusoid声音PCM数据的生成功能，可调整波形的幅值，相位，角频率，采样频率。
+- added 实现了sinusoid声音PCM数据spectrum提取的验证代码；完成任意波形，基于角速度w,周期T,频率f的sine的表达方法，并通合成一个矩形波验证了表达方式的正确性。
+- added 分析并验证了声音PCM数据频谱性质:Linearity,Shift,Symmetry。
+- added 实现了带Zero-padding的FFT.实现并验证了STFT和ISTFT.实现了4个window函数。
+- added 完成卷积操作验证代码。
+- added 实现了加窗频域变换和逆变换。
+
+      ----------------------------------------------------------------------
+ispeech 0.3 2019.08:
+- added 实现了一种频域peak检测方法。
+- added 为了得到更精确的peak所对应的频率，实现了对peak进行插值（parabolic）。
+- added 实现不同帧sinusoids的检测。
+- added 实现不同帧正弦波形个数不一致的处理方法。
+- added 实现使用频域的main lobe的合成声音的方法。
+
+      ----------------------------------------------------------------------
+ispeech 0.4 2019.09:
+- added 实现了wav和pcm文件的读写类。
+- added 实现了正弦波,方波，三角波，白噪声信号源的生成类。
+- added 实现各种窗信号源生成c++类（Hanning,Hamming,Rectangular,Guassian,Flattop,Blackman,Barlett）。
+- added 实现信号加窗功能。
+- added 为了便于使用python进行测试，将wav文件读写，信号源生成和FFT变换的c++类封装为python可以直接调用的python库，生成的库可以使用pip安装到本机的python环境中。
+- added 实现DFT模型：DFT用于提取一帧声音数据频谱的峰值和根据指定的频谱峰值合成出声音数据。
+- added 参考matlab和numpy，实现了相位反卷绕和相位插值的功能。
+- added 实现2个新的窗函数Blackmanharris和Triangle。
+- added 从音乐文件中提取每一帧的频率，并根据每一帧的频率计算对应的音高。
+- added 利用第三方库，实现从midi文件中解析出音高，音长信息；根据音高和旋律生成midi文件。
+-added 实现了一个根据观察序列，求取隐含状态序列的方法，并利用脚本进行验证。
+整理出以下python脚本模块：
+     1）speech_fft 变换
+     2）speech_source 信号生成和wav文件读，写
+     3）speech_model_dft DFT模型
+     4）speech_model_stft STFT模型
+     5）speech_model_sine Sine模型
+
+      ----------------------------------------------------------------------
+
+ispeech 0.5 2019.10:
+- added 修改c++复杂数据结构，解决其在pybind11中无法使用的问题。
+- added 推导出时频变换时频域离散主值和声音信号频率的对应关系。
+- added 实现信号shift和窗口归一化方法。
+- added 实现hfc(high-frequency content)和specral flux，用于对歌曲信号中每个文字的分割。
+      ----------------------------------------------------------------------
+
+ispeech 0.6 2019.11:
+- added 实现Harmonic 音频f0提取算法TWE（Two-way mismatch algorithm (Maher and Beauchamp））的python代码和c++代码。
+- added 实现harmonic Detection功能代码。
+- added 实现harmonic Analysis功能代码。
+- added 尝试使用hfc(high-frequency content)和specral flux对歌曲信号中每个文字的分割。
+      ----------------------------------------------------------------------

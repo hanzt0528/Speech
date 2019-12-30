@@ -1,0 +1,18 @@
+  /Users/hanzhongtao/Programs/Speech/src/ispeech/source/generator:
+  total used in directory 184 available 9223372036852972874
+  drwxr-xr-x  36 hanzhongtao  staff  1152 Sep  9 17:24 .
+  drwxr-xr-x  18 hanzhongtao  staff   576 Sep  9 17:02 .
+
+.
+  -rw-r--r--   1 hanzhongtao  staff   765 Sep  9 16:45 Generator.cpp
+* -rw-r--r--   1 hanzhongtao  staff  2503 Sep  9 16:45 Generator.h
+  -rw-r--r--   1 hanzhongtao  staff  1947 Sep  9 16:45 PinkNoiseGenerator.cpp
+  -rw-r--r--   1 hanzhongtao  staff  1328 Sep  9 16:46 PinkNoiseGenerator.h
+  -rw-r--r--   1 hanzhongtao  staff  1325 Sep  9 16:53 SineGenerator.cpp
+* -rw-r--r--   1 hanzhongtao  staff   785 Sep  9 16:53 SineGenerator.h
+  -rw-r--r--   1 hanzhongtao  staff  1474 Sep  9 16:53 SquareGenerator.cpp
+  -rw-r--r--   1 hanzhongtao  staff  1312 Sep  9 16:53 SquareGenerator.h
+  -rw-r--r--   1 hanzhongtao  staff  2037 Sep  9 16:53 TriangleGenerator.cpp
+  -rw-r--r--   1 hanzhongtao  staff  1394 Sep  9 17:24 TriangleGenerator.h
+  -rw-r--r--   1 hanzhongtao  staff  1155 Sep  9 16:53 WhiteNoiseGenerator.cpp
+  -rw-r--r--   1 hanzhongtao  staff   825 Sep  9 16:53 WhiteNoiseGenerator.h
